@@ -7,7 +7,11 @@ const romanSymbolsMap: Record<string, number> = {
     D: 500,
     M: 1000,
 }
-
+/**
+ * Converts a Roman numeral string to a decimal integer.
+ * Assumes valid input.
+ * @param roman e.g. MCMXLIV
+ */
 export function romanToDecimal(roman: string): number {
     let total = 0;
     for (let i = 0; i < roman.length; i++) {
