@@ -84,7 +84,6 @@ describe("romanToDecimal", () => {
         it("should convert CM to 900", () => {
             expect(romanToDecimal("CM")).toBe(900);
         });
-
     });
 
     describe("complex cases", () => {
@@ -97,6 +96,11 @@ describe("romanToDecimal", () => {
         it("should convert LXIX to 69", () => {
             expect(romanToDecimal("LXIX")).toBe(69);
         });
+    });
 
+    describe("edge cases", () => {
+        it("should convert an empty string to 0", () => {
+            expect(romanToDecimal("")).toBe(0);
+        });
     });
 });
