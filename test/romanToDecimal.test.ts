@@ -31,4 +31,32 @@ describe("romanToDecimal", () => {
             expect(romanToDecimal("M")).toBe(1000);
         });
     });
+    describe("additive cases", () => {
+        it("should convert II to 2", () => {
+            expect(romanToDecimal("II")).toBe(2);
+        });
+        it("should convert VII to 7", () => {
+            expect(romanToDecimal("VII")).toBe(7);
+        });
+
+        it("should convert XV to 15", () => {
+            expect(romanToDecimal("XV")).toBe(15);
+        });
+
+        it("should convert LX to 60", () => {
+            expect(romanToDecimal("LX")).toBe(60);
+        });
+
+        it("should convert CL to 150", () => {
+            expect(romanToDecimal("CL")).toBe(150);
+        });
+
+        it("should convert DC to 600", () => {
+            expect(romanToDecimal("DC")).toBe(600);
+        });
+
+        it("should convert MM to 2000", () => {
+            expect(romanToDecimal("MM")).toBe(2000);
+        });
+    });
 });
