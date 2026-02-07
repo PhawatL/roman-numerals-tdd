@@ -1,6 +1,6 @@
 {
   "name": "roman-numerals-tdd",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
