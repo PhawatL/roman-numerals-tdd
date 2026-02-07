@@ -59,4 +59,31 @@ describe("romanToDecimal", () => {
             expect(romanToDecimal("MM")).toBe(2000);
         });
     });
+
+    describe("subtractive cases", () => {
+        it("should convert IV to 4", () => {
+            expect(romanToDecimal("IV")).toBe(4);
+        });
+
+        it("should convert IX to 9", () => {
+            expect(romanToDecimal("IX")).toBe(9);
+        });
+
+        it("should convert XL to 40", () => {
+            expect(romanToDecimal("XL")).toBe(40);
+        });
+
+        it("should convert XC to 90", () => {
+            expect(romanToDecimal("XC")).toBe(90);
+        });
+
+        it("should convert CD to 400", () => {
+            expect(romanToDecimal("CD")).toBe(400);
+        });
+
+        it("should convert CM to 900", () => {
+            expect(romanToDecimal("CM")).toBe(900);
+        });
+
+    });
 });

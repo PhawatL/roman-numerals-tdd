@@ -10,9 +10,14 @@ const romanSymbolsMap: Record<string, number> = {
 
 export function romanToDecimal(roman: string): number {
     let total = 0;
-    for (const char of roman) {
-        const value = romanSymbolsMap[char];
-        total += value || 0;
+    for (let i = 0; i < roman.length; i++) {
+        const currentValue = romanSymbolsMap[roman[i]];
+        const nextValue = romanSymbolsMap[roman[i + 1]];
+        if (nextValue && currentValue < nextValue) {
+            total -= currentValue;
+        } else {
+            total += currentValue;
+        }
     }
     return total;
 
