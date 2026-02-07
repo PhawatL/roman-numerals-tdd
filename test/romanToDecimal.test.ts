@@ -86,4 +86,17 @@ describe("romanToDecimal", () => {
         });
 
     });
+
+    describe("complex cases", () => {
+        it("should convert MCMXLIV to 1944", () => {
+            expect(romanToDecimal("MCMXLIV")).toBe(1944);
+        });
+        it("should convert MMXXVI to 2026", () => {
+            expect(romanToDecimal("MMXXVI")).toBe(2026);
+        });
+        it("should convert LXIX to 69", () => {
+            expect(romanToDecimal("LXIX")).toBe(69);
+        });
+
+    });
 });
